@@ -75,7 +75,25 @@ class Home extends StatelessWidget {
               ),
               SizedBox(
                 height: 15,
-              )
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/MapScreen');
+                },
+                child: Container(
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Search on Map",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                    decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(10))),
+              ),
             ],
           ),
         ),
