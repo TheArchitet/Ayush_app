@@ -48,7 +48,7 @@ class _GoogleMapSampleApp extends State<GoogleMapsSampleApp>{
         "/Inpatient": (context) => Inpatient(Name: "Inpatient"),
         "/Outpatient": (context) => Outpatient(Name: "Outpatient"),
         "/MapScreen": (context) => MapScreen(),
-        "/Doctors": (context) => Doctors(Name: "Doctors"),
+       
         "/Services": (context) => Services(
               Name: "Services",
             ),

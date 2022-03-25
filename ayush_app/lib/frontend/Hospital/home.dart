@@ -5,7 +5,9 @@ class home extends StatelessWidget {
   String hospital_name;
     String Start ;
          String end;
-  home({required this.hospital_name,required this.end , required this.Start, Key? key}) : super(key: key);
+         String id ;
+         String Address ;
+  home({required this.hospital_name,required this.end , required this.Start,  required this.id,  required this.Address }) ;
 
   @override
   Widget build(BuildContext context) {
