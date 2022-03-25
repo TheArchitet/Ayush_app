@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 class home extends StatelessWidget {
   String hospital_name;
-  home({required this.hospital_name, Key? key}) : super(key: key);
+    String Start ;
+         String end;
+  home({required this.hospital_name,required this.end , required this.Start, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +74,7 @@ class home extends StatelessWidget {
             Align(
               alignment: Alignment.topLeft,
               child: Text(
-                "   Opening Time : ",
+                "   Opening Time : ${Start}",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -85,7 +87,7 @@ class home extends StatelessWidget {
             Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  "   Closing Time : ",
+                  "   Closing Time : ${end}",
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,

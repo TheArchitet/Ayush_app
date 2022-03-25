@@ -27,18 +27,7 @@ class Home extends StatelessWidget {
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20))),
       ),
-      // bottomNavigationBar: CurvedNavigationBar(
-      //   index: page,
-      //   color: Colors.green,
-      //   buttonBackgroundColor: Colors.orange,
-      //   backgroundColor: Colors.transparent,
-      //   height: 50,
-      //   items: <Widget>[
-      //     Icon(Icons.book, size: 30),
-      //     Icon(Icons.home, size: 30),
-      //     Icon(Icons.camera, size: 30),
-      //   ],
-      // ),
+     
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
@@ -98,24 +87,23 @@ class Home extends StatelessWidget {
 Widget column(String image, String text) {
   return Column(
     children: [
-      Container(
-        margin: EdgeInsets.only(right: 10, left: 10, top: 10, bottom: 10),
-        width: 150,
-        height: 150,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(color: Colors.green, width: 3),
-            borderRadius: BorderRadius.circular(30),
-            image:
-                DecorationImage(image: AssetImage(image), fit: BoxFit.contain)),
+      InkWell(
+        onTap: (){
+          
+        },
+        child: Container(
+          margin: EdgeInsets.only(right: 10, left: 10, top: 10, bottom: 10),
+          width: 150,
+          height: 150,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(color: Colors.green, width: 3),
+              borderRadius: BorderRadius.circular(30),
+              image:
+                  DecorationImage(image: AssetImage(image), fit: BoxFit.contain)),
+        ),
       ),
-      // Text(
-      //   text,s
-      //   style: TextStyle(
-      //     color: Colors.red,
-      //     fontWeight: FontWeight.w600,
-      //   ),
-      // ),
+     
     ],
   );
 }

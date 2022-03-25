@@ -1,10 +1,15 @@
 
 import 'package:ayush_app/frontend/Hospital/home.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:flutter/material.dart';
 
 class Hospital_list extends StatelessWidget {
   Hospital_list({Key? key}) : super(key: key);
+  var firestoreDB = FirebaseFirestore.instance.collection("Hospitals").snapshots();
+      String hospitalName = "";
+    
+
   List<String> Hospital = [
     "Morarji Desai National\n institute of yoga",
     "Sugun Hospital",
@@ -27,8 +32,13 @@ class Hospital_list extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: ListView.builder(
-            itemCount: 5,
+        child: StreamBuilder(
+          stream: firestoreDB,
+          builder: (context , snapshot){
+              if (!snapshot.hasData)
+              return Center(child: CircularProgressIndicator());
+            return ListView.builder(
+          itemCount: (snapshot.data! as QuerySnapshot).docs.length,
             itemBuilder: (BuildContext context, int index) {
               return Column(
                 children: [
@@ -38,7 +48,12 @@ class Hospital_list extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => home(
-                            hospital_name: Hospital[index],
+                            hospital_name: (snapshot.data! as QuerySnapshot )
+                        .docs[index]['Name'] ,
+                        Start:  (snapshot.data! as QuerySnapshot )
+                        .docs[index]['opening time']  ,
+                        end:   (snapshot.data! as QuerySnapshot )
+                        .docs[index]['closing time']  ,
                           ),
                         ),
                       );
@@ -67,7 +82,8 @@ class Hospital_list extends StatelessWidget {
 
                           Expanded(
                             child: Text(
-                              Hospital[index],
+                              (snapshot.data! as QuerySnapshot)
+                        .docs[index]['Name'],
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
@@ -87,7 +103,8 @@ class Hospital_list extends StatelessWidget {
                   )
                 ],
               );
-            }),
+            });
+          }),
       ),
     );
   }
