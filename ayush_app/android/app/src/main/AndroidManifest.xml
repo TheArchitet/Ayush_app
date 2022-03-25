@@ -3,6 +3,8 @@
    <application
         android:label="ayush_app"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyB3BnOJPR7ykY0DIacF4GLVoVXC482VO9U"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
