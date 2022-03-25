@@ -56,9 +56,9 @@ class Hospital_list extends StatelessWidget {
                         end:   (snapshot.data! as QuerySnapshot )
                         .docs[index]['closing time']  ,
                         Address:(snapshot.data! as QuerySnapshot )
-                        .docs[index]['Address'] , 
-                        id: (snapshot.data! as QuerySnapshot )
-                        .docs[index].id,
+                        .docs[index]['address'] , 
+                        // id: (snapshot.data! as QuerySnapshot )
+                        // .docs[index].id,
                           ),
                         ),
                       );
