@@ -4,7 +4,7 @@
         android:label="ayush_app"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyDuVz6oFf8PnNi-PuKf46YuUf-PXGWGvRI"/>
+               android:value="AIzaSyDpYRfldUDBo9uduk6kDJcmj1uy5JnAODo"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

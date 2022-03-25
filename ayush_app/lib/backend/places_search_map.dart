@@ -47,7 +47,7 @@ class PlacesSearchMapSample extends StatefulWidget {
 }
 
 class _PlacesSearchMapSample extends State<PlacesSearchMapSample> {
-  static const String _API_KEY = 'AIzaSyDuVz6oFf8PnNi-PuKf46YuUf-PXGWGvRI';
+  static const String _API_KEY = 'AIzaSyDpYRfldUDBo9uduk6kDJcmj1uy5JnAODo';
 
   static double latitude = 40.7484405;
   static double longitude = -73.9878531;
