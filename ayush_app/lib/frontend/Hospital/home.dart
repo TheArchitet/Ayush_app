@@ -21,7 +21,7 @@ class home extends StatelessWidget {
         padding: const EdgeInsets.all(5.0),
         child: Column(
           children: [
-            Text(id) , 
+            // Text(id) , 
             SizedBox(
               height: 7,
             ),

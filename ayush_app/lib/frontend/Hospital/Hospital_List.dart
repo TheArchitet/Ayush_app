@@ -81,7 +81,8 @@ class Hospital_list extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(30),
                                 image: DecorationImage(
                                     image: NetworkImage(
-                                        "https://ayush.karnataka.gov.in/storage/dept/877938.jpg"),
+                                       (snapshot.data! as QuerySnapshot)
+                        .docs[index]['pic']),
                                     fit: BoxFit.contain)),
                           ),
 
