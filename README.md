@@ -1,4 +1,4 @@
-# App for Ayush service availibility
+# App for Ayush service availability
 
 Team name : Indian Turings
 
@@ -58,5 +58,5 @@ Team name : Indian Turings
 
   ## Screenshots
   
-  
+  Drive link for screenshots- Please click [here](https://drive.google.com/drive/folders/16sAAUtH1Y_c2rVDNGNws16f21qlt6oXx)
   
