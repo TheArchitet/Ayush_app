@@ -14,6 +14,6 @@ Team name : Indian Turings
 - [Tushar Shirbhate](https://github.com/Tushar-Shirbhate) - 
   tgshirbhate04@gmail.com
   
- -[Anisha Jadhav]()-jadhavanisha3033@gmail.com
+ - [Anisha Jadhav]()-jadhavanisha3033@gmail.com
   
   
