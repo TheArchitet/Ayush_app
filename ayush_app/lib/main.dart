@@ -1,4 +1,5 @@
 import 'package:ayush_app/backend/mapscreen.dart';
+import 'package:ayush_app/backend/mapscreen1.dart';
 import 'package:ayush_app/frontend/Home_page.dart';
 import 'package:ayush_app/frontend/Hospital/Doctors.dart';
 import 'package:ayush_app/frontend/Hospital/Hospital_List.dart';
@@ -47,6 +48,7 @@ class _GoogleMapSampleApp extends State<GoogleMapsSampleApp>{
         "/Hospital_list": (context) => Hospital_list(),
         "/Inpatient": (context) => Inpatient(Name: "Inpatient"),
         "/Outpatient": (context) => Outpatient(Name: "Outpatient"),
+        //"/MapScreen1": (context) => MapScreen1(),
         "/MapScreen": (context) => MapScreen(),
         "/Doctors": (context) => Doctors(Name: "Doctors"),
         "/Services": (context) => Services(
