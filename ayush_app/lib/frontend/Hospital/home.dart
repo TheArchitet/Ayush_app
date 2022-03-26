@@ -1,13 +1,17 @@
 
+import 'package:ayush_app/frontend/Hospital/Doctors.dart';
+import 'package:ayush_app/frontend/Hospital/Outpatient.dart';
+import 'package:ayush_app/frontend/Hospital/Services.dart';
+import 'package:ayush_app/frontend/Hospital/inpatient.dart';
 import 'package:flutter/material.dart';
 
 class home extends StatelessWidget {
   String hospital_name;
     String Start ;
          String end;
-        //  String id ;
+         String id ;
          String Address ;
-  home({required this.hospital_name,required this.end , required this.Start,    required this.Address }) ;
+  home({required this.hospital_name,required this.end , required this.Start, required this.id, required this.Address }) ;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +21,7 @@ class home extends StatelessWidget {
         padding: const EdgeInsets.all(5.0),
         child: Column(
           children: [
+            Text(id) , 
             SizedBox(
               height: 7,
             ),
@@ -92,15 +97,25 @@ class home extends StatelessWidget {
             Divider(
               thickness: 2,
             ),
-            Sanket(context, "Inpatient Department ", "Outpatient Department",
-                "/Inpatient", "/Outpatient"),
-            Sanket(context, "Doctors ", "Services Available", "/Doctors",
-                "/Services"),
+          Row(
+            children: [
+              Sanket(context, "Inpatient Rate", Inpatient(Name: "Inpatient")) ,
+               Sanket(context, "Outpatient rate", Outpatient(Name: "Outpatient")) ,
+
+            ],
+          ), 
+           Row(
+            children: [
+              Sanket(context, "Doctor", Doctors(Name: "Doctors", id: id)) ,
+               Sanket(context, "Services Available ",Services(Name: "Services Available",) ) ,
+
+            ],
+          ) , 
             Divider(
               thickness: 2,
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.35,
+              height: MediaQuery.of(context).size.height * 0.15,
             ),
             InkWell(
               onTap: () {
@@ -129,19 +144,13 @@ class home extends StatelessWidget {
  
                  
 
-Widget Sanket(
-  context,
-  String text1,
-  String text2,
-  String nv1,
-  String nv2,
-) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceAround,
-    children: [
-      InkWell(
+Widget Sanket(context ,text1 , Widget s){
+  return  InkWell(
         onTap: () {
-          Navigator.pushNamed(context, nv1);
+           Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  s),
+  );
         },
         child: Container(
           child: Center(
@@ -160,29 +169,5 @@ Widget Sanket(
             borderRadius: BorderRadius.circular(20),
           ),
         ),
-      ),
-      InkWell(
-        onTap: () {
-          Navigator.pushNamed(context, nv2);
-        },
-        child: Container(
-          child: Center(
-            child: Text(text2,
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 13.5)),
-          ),
-          margin: EdgeInsets.only(right: 10, left: 10, top: 10, bottom: 10),
-          width: MediaQuery.of(context).size.width * 0.43,
-          height: 85,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(color: Colors.green, width: 3),
-            borderRadius: BorderRadius.circular(20),
-          ),
-        ),
-      ),
-    ],
-  );
+      );
 }
