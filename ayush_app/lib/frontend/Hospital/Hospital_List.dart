@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 class Hospital_list extends StatelessWidget {
   Hospital_list({Key? key}) : super(key: key);
   var firestoreDB = FirebaseFirestore.instance.collection("Hospitals").snapshots();
+  var Sanket = FirebaseFirestore.instance.collection("Hospitals").doc().collection("name");
       String hospitalName = "";
     
 
@@ -54,6 +55,10 @@ class Hospital_list extends StatelessWidget {
                         .docs[index]['opening time']  ,
                         end:   (snapshot.data! as QuerySnapshot )
                         .docs[index]['closing time']  ,
+                        Address:(snapshot.data! as QuerySnapshot )
+                        .docs[index]['address'] , 
+                        // id: (snapshot.data! as QuerySnapshot )
+                        // .docs[index].id,
                           ),
                         ),
                       );

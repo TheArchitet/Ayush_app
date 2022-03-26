@@ -5,7 +5,9 @@ class home extends StatelessWidget {
   String hospital_name;
     String Start ;
          String end;
-  home({required this.hospital_name,required this.end , required this.Start, Key? key}) : super(key: key);
+        //  String id ;
+         String Address ;
+  home({required this.hospital_name,required this.end , required this.Start,    required this.Address }) ;
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +21,9 @@ class home extends StatelessWidget {
               height: 7,
             ),
             Container(
-              height: 120,
-              width: double.infinity,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
                     margin: EdgeInsets.only(left: 5, top: 5, bottom: 5),
-                    width: 100,
-                    height: 100,
+                    width: 120,
+                    height: 120,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         // border: Border.all(color: Colors.green, width: 3),
@@ -38,14 +34,17 @@ class home extends StatelessWidget {
                             ),
                             fit: BoxFit.contain)),
                   ),
-                  Column(
+                   SizedBox(
+              height: 7,
+            ),
+                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
                         height: 8,
                       ),
                       Align(
-                        alignment: Alignment.topLeft,
+                        alignment: Alignment.center,
                         child: Text(
                           hospital_name,
                           overflow: TextOverflow.ellipsis,
@@ -62,12 +61,9 @@ class home extends StatelessWidget {
                       Text(
                         "HR mahajani road,\nMatunga",
                         style: TextStyle(color: Colors.black, fontSize: 15),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+                      ),]) , 
+            
+            
             Divider(
               thickness: 2,
             ),
@@ -130,6 +126,8 @@ class home extends StatelessWidget {
     ));
   }
 }
+ 
+                 
 
 Widget Sanket(
   context,

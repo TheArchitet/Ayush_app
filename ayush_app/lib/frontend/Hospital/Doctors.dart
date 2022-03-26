@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Doctors extends StatelessWidget {
   String Name;
-  Doctors({required this.Name, Key? key}) : super(key: key);
+  String id ;
+  Doctors({required this.Name,required this.id, Key? key}) : super(key: key);
   List<String> Kayachikitsa = [
     "Dr P.P Gore",
     "Dr Ruhi Anjaria",
