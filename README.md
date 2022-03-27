@@ -15,6 +15,8 @@ Team name : Indian Turings
   tgshirbhate04@gmail.com
   
  - [Anisha Jadhav]()-jadhavanisha3033@gmail.com
+
+ - [Sanket Hake](https://github.com/Sanket-Hake)-sankethake4847@gmail.com 
   
   ## Description
   
