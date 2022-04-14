@@ -62,6 +62,22 @@ Team name : Indian Turings
   3. Feature to book ambulance.
 
   ## Screenshots
+  <table>
+  <tr>
+  <td><img src='images/1648264027790.jpg' width=300></td>
+  <td><img src='images/1648264027756.jpg' width=300></td>
+  <td><img src='images/1648264027693.jpg' width=300></td>
+  </tr>
   
-  Drive link for screenshots- Please click [here](https://drive.google.com/drive/folders/16sAAUtH1Y_c2rVDNGNws16f21qlt6oXx)
+  <tr>
+  <td><img src='images/Photo from Shubham Salunkhe.jpg' width=300></td>
+  <td><img src='images/1649967537404.jpg' width=300></td>
+  <td><img src='images/1648264027710.jpg' width=300></td>
+  </tr>
+  
+  <tr>
+  <td><img src='images/Photo from Shubham Salunkhe(1).jpg' width=300></td>
+  <td><img src='images/Photo from Shubham Salunkhe(2).jpg' width=300></td>
+  </tr>
+  </table>
   
